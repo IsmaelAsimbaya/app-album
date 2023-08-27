@@ -58,7 +58,7 @@ public class AlbumService {
         dto.setTitle(album.getTitle());
         dto.setRelease_date(album.getRelease_date());
         dto.setVersion(album.getVersion());
-        SingerDto singerDto = singerClient.getSingerById(dto.getId());
+        SingerDto singerDto = singerClient.getSingerById(album.getSinger_id());
         String author = String.format("%d - %s %s",
                 singerDto.getId(),
                 singerDto.getFirst_name(),
